@@ -2,7 +2,7 @@ package PasswordPackage;
 
 public class Password {
 
-    public String encruptedPassword(String logingPasswordTry){
+    public boolean encruptedPassword(String logingPasswordTry){
         char [] chars = logingPasswordTry.toCharArray();
 
         for (char c : chars){
@@ -11,9 +11,9 @@ public class Password {
         }
 // ;;;666 is the encruptedPassword for 666 after i manipulate it in the for loop.
         if (logingPasswordTry.equals("666;;;")){
-            return logingPasswordTry;
+            return true;
         }
-        return "Wrong password";
+        return false;
     }
 
     public String decruptedPassword(String logingPasswordTry){

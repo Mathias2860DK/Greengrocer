@@ -11,8 +11,14 @@ public class Product {
         this.price = price;
     }
 
+    public Product() {
+    }
+
     public String toString (){
         return name;
     }
 
+    public int getBarcode() {
+        return barcode;
+    }
 }
