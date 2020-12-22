@@ -23,7 +23,7 @@ public class Password {
             c -= 5;
             System.out.print(c);
         }
-// ;;;666 is the encruptedPassword for 666 after i manipulate it in the for loop.
+// ;;;666 is the decruptedPassword for 666 after i manipulate it in the for loop.
         if (logingPasswordTry.equals(";;;666")){
             return logingPasswordTry;
         }

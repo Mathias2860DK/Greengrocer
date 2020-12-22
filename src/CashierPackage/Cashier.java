@@ -10,13 +10,13 @@ public class Cashier {
     String logingPassword; //Passwords are always numbers. However i use a String because i hash it.
     Scanner scanner;
     Password password = new Password();
-    MainController mainController = new MainController();
+
     /*
     Creating a new user happens in another program. So the loginNumber and loginPassword are put in
     manually for the purpose of this program. The hashed password is likely in a database.
     */
 
-    public void login (){
+    public boolean login (){
         scanner = new Scanner(System.in);
 
         String loginNumber = "5"; //typed in manually for the purpose of this program.
@@ -28,18 +28,17 @@ public class Cashier {
         System.out.println("Password: ");
         String loginPasswordTry = scanner.nextLine();
 
-        if (password.encruptedPassword(loginPasswordTry) == false){
-            System.out.println("eror");
+        if (!password.encruptedPassword(loginPasswordTry)){
+            System.out.println("error");
             login();
+            return false;
         } else {
-            mainController.runProgram();
+            return true;
         }
 
-        //String correctPassword = password.encruptedPassword(loginPasswordTry);
-      /*  while (!loginNumberTry.equals(loginNumber) || !logingPassword.equals(correctPassword) ){
-            System.out.println("Error");
-            login();
-        }*/
+    }
+
+    public void scanItems(){
 
     }
 
